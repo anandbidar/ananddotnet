@@ -1,3 +1,9 @@
 1st line
+<<<<<<< Updated upstream
 2nd line not extended
 3rd line
+=======
+2nd line extended
+3rd line also extended
+4th line
+>>>>>>> Stashed changes
