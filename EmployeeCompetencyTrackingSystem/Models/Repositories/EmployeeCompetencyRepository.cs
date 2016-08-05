@@ -35,15 +35,15 @@ namespace EmployeeCompetencyTrackingSystem.Models.Repositories
             employeeCompetencies.Add(emp6);
 
         }
-        public List<EmployeeCompetence> GetAllEmployeesCometencies()
+        public IEnumerable<EmployeeCompetence> GetAllEmployeesCompetencies()
         {
             return employeeCompetencies;
         }
-        public List<EmployeeCompetence> GetAllEmployeeCometenciesByEmployeeId(int employeeId)
+        public IEnumerable<EmployeeCompetence> GetAllEmployeeCompetenciesByEmployeeId(int employeeId)
         {
             return employeeCompetencies.Where(e => e.EmployeeId == employeeId).ToList();
         }
-        public List<EmployeeCompetence> GetAllEmployeesCometenciesByCompetencyId(int competencyId)
+        public IEnumerable<EmployeeCompetence> GetAllEmployeesCompetenciesByCompetencyId(int competencyId)
         {
             return employeeCompetencies.Where(e => e.CompetencyId == competencyId).ToList();
         }

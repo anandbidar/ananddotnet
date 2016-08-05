@@ -22,7 +22,7 @@ namespace EmployeeCompetencyTrackingSystem.Tests
         public void TestDetailsByEid()
         {
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
-            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByEid(1000);
+            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByEmployeeId(1000);
             int count = ((List<EmployeeCompetence>)result.Model).Count;
             Assert.AreEqual(1, count);
         }
@@ -30,7 +30,7 @@ namespace EmployeeCompetencyTrackingSystem.Tests
         public void TestDetailsByCid()
         {
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
-            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByCid(1);
+            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByCompetencyId(1);
             int count = ((List<EmployeeCompetence>)result.Model).Count;
             Assert.AreEqual(3, count);
         }

@@ -16,25 +16,25 @@ namespace EmployeeCompetencyTrackingSystem.Controllers
         public ActionResult Index()
         {
 
-            return View(_EmployeeCompetencyRepository.GetAllEmployeesCometencies());
+            return View(_EmployeeCompetencyRepository.GetAllEmployeesCompetencies());
         }
 
         //
         // GET: /EmployeeCompetency/Details/5
 
-        public ActionResult DetailsByEid(int id)
+        public ActionResult DetailsByEmployeeId(int id)
         {
-            return View(_EmployeeCompetencyRepository.GetAllEmployeeCometenciesByEmployeeId(id));
+            return View(_EmployeeCompetencyRepository.GetAllEmployeeCompetenciesByEmployeeId(id));
         }
-        public ActionResult DetailsByCid(int id)
+        public ActionResult DetailsByCompetencyId(int id)
         {
-            return View(_EmployeeCompetencyRepository.GetAllEmployeesCometenciesByCompetencyId(id));
+            return View(_EmployeeCompetencyRepository.GetAllEmployeesCompetenciesByCompetencyId(id));
         }
 
         //
         // GET: /EmployeeCompetency/Create
 
-        public ActionResult Create()
+   /*     public ActionResult Create()
         {
             return View();
         }
@@ -107,6 +107,6 @@ namespace EmployeeCompetencyTrackingSystem.Controllers
             {
                 return View();
             }
-        }
+        }*/
     }
 }
