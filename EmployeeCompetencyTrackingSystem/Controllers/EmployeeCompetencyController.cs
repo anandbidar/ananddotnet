@@ -1,9 +1,13 @@
 ﻿using EmployeeCompetencyTrackingSystem.Models.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
+[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "EmployeeCompetencyTrackingSystem.Controllers")]
+
 
 namespace EmployeeCompetencyTrackingSystem.Controllers
 {
@@ -16,7 +20,7 @@ namespace EmployeeCompetencyTrackingSystem.Controllers
         public ActionResult Index()
         {
 
-            return View(_EmployeeCompetencyRepository.GetAllEmployeesCompetencies());
+            return View(_EmployeeCompetencyRepository.EmployeesCompetencies);
         }
 
         //

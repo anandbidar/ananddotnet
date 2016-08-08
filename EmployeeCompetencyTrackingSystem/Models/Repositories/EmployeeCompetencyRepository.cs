@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Web;
 
+
+[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "EmployeeCompetencyTrackingSystem.Models.Repositories")]
+  
 namespace EmployeeCompetencyTrackingSystem.Models.Repositories
 {
+    [SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes")]
     public class EmployeeCompetencyRepository
     {
         private List<EmployeeCompetence> employeeCompetencies = new List<EmployeeCompetence>();
@@ -35,9 +40,9 @@ namespace EmployeeCompetencyTrackingSystem.Models.Repositories
             employeeCompetencies.Add(emp6);
 
         }
-        public IEnumerable<EmployeeCompetence> GetAllEmployeesCompetencies()
+        public IEnumerable<EmployeeCompetence> EmployeesCompetencies
         {
-            return employeeCompetencies;
+            get { return employeeCompetencies; }
         }
         public IEnumerable<EmployeeCompetence> GetAllEmployeeCompetenciesByEmployeeId(int employeeId)
         {

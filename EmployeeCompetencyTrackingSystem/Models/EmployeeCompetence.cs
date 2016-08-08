@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Web;
+
+[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "EmployeeCompetencyTrackingSystem.Models")]
 
 namespace EmployeeCompetencyTrackingSystem.Models
 {
@@ -13,7 +16,7 @@ namespace EmployeeCompetencyTrackingSystem.Models
         public string CompetencyName { get; set; }
         public int CompetencyRating { get; set; }
     }
-    public class Employee
+  /*  public class Employee
     {
         public int EmployeeId { get; set; }
         public string EmployeeIName { get; set; }
@@ -27,6 +30,6 @@ namespace EmployeeCompetencyTrackingSystem.Models
     {
         public int CandidateId { get; set; }
         public string CompetencyName { get; set; }
-    }
+    }*/
 
 }

@@ -1,8 +1,12 @@
-﻿using System.Web;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Web;
 using System.Web.Optimization;
+
+   //[SuppressMessage("Microsoft.Usage", "CA1053:StaticHolderTypesShouldNotHaveConstructors") , Scope("namespace")]
 
 namespace EmployeeCompetencyTrackingSystem
 {
+[SuppressMessage("Microsoft.Design", "CA1053:StaticHolderTypesShouldNotHaveConstructors")]    
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
