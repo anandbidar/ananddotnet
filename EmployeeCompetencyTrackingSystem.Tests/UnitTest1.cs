@@ -32,7 +32,7 @@ namespace EmployeeCompetencyTrackingSystem.Tests
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
             ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByCompetencyId(1);
             int count = ((List<EmployeeCompetence>)result.Model).Count;
-            Assert.AreEqual(3, count);
+            Assert.AreEqual(4, count);
         }
     }
 }
