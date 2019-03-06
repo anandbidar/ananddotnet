@@ -16,13 +16,13 @@ namespace EmployeeCompetencyTrackingSystem.Tests
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
             ViewResult result = (ViewResult) _EmployeeCompetencyController.Index();
             int count = ((List<EmployeeCompetence>)result.Model).Count;
-            Assert.AreEqual(6, count);
+            Assert.AreEqual(8, count);
         }
         [TestMethod]
         public void TestDetailsByEid()
         {
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
-            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByEmployeeId(1000);
+            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByEid(1000);
             int count = ((List<EmployeeCompetence>)result.Model).Count;
             Assert.AreEqual(1, count);
         }
@@ -30,9 +30,9 @@ namespace EmployeeCompetencyTrackingSystem.Tests
         public void TestDetailsByCid()
         {
             EmployeeCompetencyController _EmployeeCompetencyController = new EmployeeCompetencyController();
-            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByCompetencyId(1);
+            ViewResult result = (ViewResult)_EmployeeCompetencyController.DetailsByCid(1);
             int count = ((List<EmployeeCompetence>)result.Model).Count;
-            Assert.AreEqual(4, count);
+            Assert.AreEqual(3, count);
         }
     }
 }
