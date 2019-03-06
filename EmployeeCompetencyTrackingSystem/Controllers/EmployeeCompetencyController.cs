@@ -9,6 +9,7 @@ using System.Web.Mvc;
 [module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "EmployeeCompetencyTrackingSystem.Controllers")]
 
 
+
 namespace EmployeeCompetencyTrackingSystem.Controllers
 {
     public class EmployeeCompetencyController : Controller
@@ -26,13 +27,16 @@ namespace EmployeeCompetencyTrackingSystem.Controllers
         //
         // GET: /EmployeeCompetency/Details/5
 
-        public ActionResult DetailsByEmployeeId(int id)
+        public ActionResult DetailsByEid(int id)
         {
             return View(_EmployeeCompetencyRepository.GetAllEmployeeCompetenciesByEmployeeId(id));
         }
-        public ActionResult DetailsByCompetencyId(int id)
+        public ActionResult DetailsByCid(int id)
         {
             return View(_EmployeeCompetencyRepository.GetAllEmployeesCompetenciesByCompetencyId(id));
+
+      
+
         }
 
         //
